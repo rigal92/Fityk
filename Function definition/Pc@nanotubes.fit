@@ -1,0 +1,45 @@
+#function definition for carbon materials 
+define G1(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define G2(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define G3(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define G4(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+
+
+define DD1(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define DD2(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+
+
+define D1(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define D2(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+
+
+define M01(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M02(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M03(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M04(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M05(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M06(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M07(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M08(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M09(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M10(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M11(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M12(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M13(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M14(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M15(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M16(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M17(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M18(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M19(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M20(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M21(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M22(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M23(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M24(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M25(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define M26(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+
+#define bg
+define BgPol(a0=intercept, a1=slope, a2=0, a3=0, a4=0, a5=0, a6=0) = a0 + a1*x + a2*x^2 + a3*x^3 + a4*x^4 + a5*x^5 + a6*x^6
+define BgLorentz(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)

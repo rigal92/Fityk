@@ -1,0 +1,16 @@
+#define step function
+define Step(cut =center , a=avgy) = x<cut ? Constant(a) :Constant(0)
+
+
+#define step function
+define StepLorentz(cut = center, height, centerL = center, hwhm) = x<cut ? Lorentzian(height, centerL, hwhm) :Constant(0)
+
+#define voigt lorentz parameter
+define VoigtL(height , center , gwidth = hwhm*0.8 , lwidth) = Voigt(height,center, gwidth, lwidth/2/gwidth)
+
+
+#define four lorentz with fixed width
+define FixedFourLorentz(a1 = height , c1 = center ,a2 = height , c2 = center ,a3 = height , c3 = center ,a4 = height , c4 = center , hwhm) = Lorentzian(a1, c1 , hwhm) + Lorentzian(a2, c2 , hwhm) + Lorentzian(a3, c3 , hwhm) + Lorentzian(a4, c4 , hwhm) 
+
+#define two lorentz with fixed width
+define FixedTwoLorentz(a1= height , c1= center , a2= height , c2= center , hwhm) = Lorentzian(a1, c1 , hwhm) + Lorentzian(a2, c2 , hwhm) 

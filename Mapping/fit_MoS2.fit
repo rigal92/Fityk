@@ -1,0 +1,17 @@
+define L1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define L2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define L3(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define L4(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define Spike(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+
+@*: guess Constant
+@*: A = (363.5 < x and x < 436.9)
+
+
+@*: guess L1 [376.4 : 395.6]
+@*: guess L2 [399.3 : 417.7]
+--@*: A = a and not (152.4 < x and x < 327.7)
+--@*: A = a and not (500.3 < x and x < 1274.1)
+--@*: A = a and not (67 < x and x < 104.6)
+-- @*: guess L3 [438.8 : 475.5]
+-- @*: guess L4 [119.3 : 130.3]

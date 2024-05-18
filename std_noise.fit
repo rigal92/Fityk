@@ -1,0 +1,6 @@
+#calculate standard deviation of noise on active points
+#@*: print title,stddev(y if a)
+
+#calculate standard deviation of noise on active points (calculated on residual)
+@*: print title,stddev(y-F(x) if a)
+

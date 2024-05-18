@@ -1,0 +1,48 @@
+
+#define bg
+define BgPol(a0=intercept, a1=slope, a2=0, a3=0, a4=0, a5=0, a6=0) = a0 + a1*x + a2*x^2 + a3*x^3 + a4*x^4 + a5*x^5 + a6*x^6
+define BgLorentz(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define Diamond(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define PTM(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+
+
+#------------------------------------------
+#Lorentz Height
+#function definition for carbon materials 
+define G1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G3(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G4(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G5(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G6(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+
+
+define DD1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define DD2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+
+
+define D1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define D2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+
+
+#------------------------------------------
+#Lorentz Area
+#function definition for carbon materials 
+
+#define G1(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+#define G2(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+#define G3(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+#define G4(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+
+
+#function definition for carbon materials 
+#define DD1(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+#define DD2(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+#define DD3(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+#define DD4(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+
+
+#function definition for carbon materials 
+#define D1(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+#define D2(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+

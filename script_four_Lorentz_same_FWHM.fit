@@ -1,0 +1,5 @@
+$a0=~10
+@0.F += Lorentzian(height=~11370, center=~2659.3, area=~227400, hwhm=$a0)
+@0.F += Lorentzian(height=~11370, center=~2700.3, area=~227400, hwhm=$a0)
+@0.F += Lorentzian(height=~11370, center=~2730.3, area=~227400, hwhm=$a0)
+@0.F += Lorentzian(height=~11370, center=~2750.3, area=~227400, hwhm=$a0)

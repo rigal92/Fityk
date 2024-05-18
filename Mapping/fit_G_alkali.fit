@@ -1,0 +1,13 @@
+define BgPol(a0=intercept, a1=slope, a2=0, a3=0, a4=0, a5=0, a6=0) = a0 + a1*x + a2*x^2 + a3*x^3 + a4*x^4 + a5*x^5 + a6*x^6
+define BgLorentz(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
+define Diamond(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define PTM1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define PTM2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define D1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+
+@*: A = a and not (x < 1521.2)
+@*: guess Linear
+@*: guess G1 [1555 : 1593]
+@*: guess G2 [1593 : 1651]
