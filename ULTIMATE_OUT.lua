@@ -1,7 +1,7 @@
 -- Lua script to output data and functions of all dataset in fityk session  
 
 -- Output folder name
-folder_out ="/home/rgalafassi/Desktop/Temp_fit/"
+folder_out ="/home/riccardo/Desktop/Temp_fit/"
 
 
 

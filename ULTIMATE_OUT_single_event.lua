@@ -1,10 +1,10 @@
 -- Lua script to output data and functions of all dataset in fityk session  
 
 -- Output folder name
-folder_out ="/home/rgalafassi/Desktop/Temp_fit/"
+folder_out ="/home/riccardo/Desktop/Temp_fit/"
 
 -- Dataset number
-i = 26
+i = 17
     -- get function components of ith dataset    
     f=F:get_components(i)
     
