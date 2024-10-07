@@ -5,6 +5,7 @@ define GaussPLA(height, center, hwhm) = height*exp(-ln(2)*((x-center)/hwhm)^2)
 define GaussPLB(height, center, hwhm) = height*exp(-ln(2)*((x-center)/hwhm)^2)
 define GaussPLX(height, center, hwhm) = height*exp(-ln(2)*((x-center)/hwhm)^2)
 define LorPLA(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define LorPLB(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
 define LorPLX(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
 
 #define bg
