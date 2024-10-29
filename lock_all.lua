@@ -1,5 +1,5 @@
 -- Lua script for Fityk.
-data_id = 26
+data_id = 0
 lock = true
 
 

@@ -16,32 +16,36 @@ file = io.open(filename)
 
 if file then
   c = nil
-  for l in file:lines() do
-      -- print(l)
-      if(not (string.sub(l,1,1) == "#")) then
-          c = l
-          break
-      end
+  for i=0, 12 do
+    file:read("*line")
   end
+  -- for l in file:lines() do
+  --     print(l)
+  --     if(not (string.sub(l,1,1) == "#")) then
+  --         c = l
+  --         break
+  --     end
+  -- end
+  x = Split(file:read("*line"),"\t")
+  y = Split(file:read("*line"),"\t")
+  table.remove(x,1)
+  table.remove(y,1)
 
+  ncols = #x
 
-  splitted = Split(c,"\t")
-  ncols = #splitted
-
-  for i=2401, ncols do
+  for i=2, ncols do
       -- if you need to get only a part of the spectra
-      if i >2402 then break end
+      if i > 500 then break end
       -- create dataset
       s = "@+ < '"..filename..":1:"..i.."::' _ decimal_comma"
       F:execute(s)
       -- rename dataset
-      n = F:get_dataset_count()
-      s = splitted[i]:gsub(",",":"):gsub("%.",",")
+      n = math.floor(F:get_dataset_count())
+      s = x[i-1]..":"..y[i-1]
+      print(n)
       s = "@" ..(n-1).. ":title = '" ..s.."'"
       F:execute(s)
-
   end
-  
   
 else
   print("!!! FILE NOT FOUND !!!")
