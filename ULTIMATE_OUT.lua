@@ -1,12 +1,9 @@
 -- Lua script to output data and functions of all dataset in fityk session  
 
 -- Output folder name
-folder_out ="/home/riccardo/Desktop/Temp_fit/"
-
-
+folder_out =os.getenv("HOME").."/Desktop/Temp_fit/"
 
 for i=0, F:get_dataset_count()-1 do
-
 
     -- get function components of ith dataset    
     f=F:get_components(i)
@@ -21,10 +18,13 @@ for i=0, F:get_dataset_count()-1 do
     s ="@" .. i ..  ": print all:x ,y," .. s_func .. " F(x) >'" .. folder_out .. title ..".dat'"   
     
     -- create string to output peak positions
+
     s2 ="@" .. i .. ": info peaks_err >'".. folder_out .. title .. ".peaks'"
     -- execute command in s
     F:execute(s)
-    F:execute(s2)
+    if #f > 0 then 
+        F:execute(s2)
+    end
 
 end
 
