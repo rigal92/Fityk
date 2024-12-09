@@ -63,6 +63,7 @@ def fitting(files, linearbg, save=False):
     n = 0
     for file in files:
         f.execute(f"reset; exec '{file}'")
+        f.execute(f"set max_wssr_evaluations=100")
         define_fitting_functions()
         for i,in zip(range(f.get_dataset_count())):
             x, y = points_to_arrays(f.get_data(i))
@@ -72,11 +73,11 @@ def fitting(files, linearbg, save=False):
             if(y.std()>3):
                 f.execute(f"@{i}.F += ExcitonVoigt(~{height_guess}, ~{initial_Exciton[0]}, ~{initial_Exciton[1]}, ~{initial_Exciton[2]})")
                 gwidth_Exciton = "$" + f.all_functions()[-1].var_name("gwidth")
-                print("Exciton:", gwidth_Exciton)
-                f.execute(f"@{i}.F += TrionVoigt(~{871.3157/3}, ~{initial_Trion[0]}, ~{initial_Trion[1]}, ~{initial_Trion[2]})")
-                gwidth_Trion = "$" + f.all_functions()[-1].var_name("gwidth")
-                print("Trion:", gwidth_Trion,"\n","----","\n")
-                f.execute(f"{gwidth_Exciton}={gwidth_Trion}")
+
+                if(height_guess>50):
+                    f.execute(f"@{i}.F += TrionVoigt(~{871.3157/3}, ~{initial_Trion[0]}, ~{initial_Trion[1]}, ~{initial_Trion[2]})")
+                    gwidth_Trion = "$" + f.all_functions()[-1].var_name("gwidth")
+                    f.execute(f"{gwidth_Exciton}={gwidth_Trion}")
                 print(f"fitting @{i}")
                 f.execute(f"@{i}: fit")
         if save:
@@ -103,7 +104,7 @@ if __name__ == '__main__':
     # hist(ys.max(axis=1))
     # hist(stds)
     # plt.show()
-    # fitting(["sample.fit"], (4.95336116e+02, -1.98809807e-03), save=True)
-    fitting(files, (4.95336116e+02, -1.98809807e-03), save=True)
+    fitting(["fit_501-1000.fit", "fit_1001-1500.fit", "fit_1501-2000.fit","fit_2501-3000.fit",], (4.95336116e+02, -1.98809807e-03), save=True)
+    # fitting(files, (4.95336116e+02, -1.98809807e-03), save=True)
 
 

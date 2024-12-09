@@ -6,11 +6,8 @@ folder_out ="/home/riccardo/Desktop/Temp_fit/"
 
 
 for i=0, F:get_dataset_count()-1 do
-
-
     -- get function components of ith dataset    
-    f=F:get_components(i)
-    
+    f=F:get_components(i)   
     -- create string for function components 
     s_func =""
     for n=0, #f-1 do s_func = s_func .."F[" .. n .. "](x), "  end
@@ -21,7 +18,8 @@ for i=0, F:get_dataset_count()-1 do
     s ="@" .. i ..  ": print all:x ,y," .. s_func .. " F(x) >'" .. folder_out .. title ..".dat'"   
     
     -- create string to output peak positions
-    s2 ="@" .. i .. ": info peaks_err >'".. folder_out .. title .. ".peaks'"
+    -- s2 ="@" .. i .. ": info peaks_err >'".. folder_out .. title .. ".peaks'"
+    s2 ="@" .. i .. ": info peaks >'".. folder_out .. title .. ".peaks'"
     -- execute command in s
     F:execute(s)
     F:execute(s2)
