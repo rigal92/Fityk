@@ -19,8 +19,16 @@ for i=0, F:get_dataset_count()-1 do
     s2 ="@" .. i .. ": info peaks_err >'".. folder_out .. title .. ".peaks'"
     -- execute command in s
     F:execute(s)
-    if #f > 0 then 
+
+    if #f > 0 then
+        F:set_throws(false)
         F:execute(s2)
+        if F:last_error()~="" then
+            s2 ="@" .. i .. ": info peaks >'".. folder_out .. title .. ".peaks'"
+            F:execute(s2)
+        end
+
+
     end
 
 end
