@@ -27,8 +27,7 @@ for i=0, F:get_dataset_count()-1 do
             s2 ="@" .. i .. ": info peaks >'".. folder_out .. title .. ".peaks'"
             F:execute(s2)
         end
-
-
+        F:set_throws(true)
     end
 
 end
