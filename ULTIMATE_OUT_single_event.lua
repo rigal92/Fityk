@@ -4,7 +4,7 @@
 folder_out ="/home/riccardo/Desktop/Temp_fit/"
 
 -- Dataset number
-i = 17
+i = 1
     -- get function components of ith dataset    
     f=F:get_components(i)
     

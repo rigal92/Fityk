@@ -1,34 +1,34 @@
 #------------------------------------------
 #Lorentz Height
 #function definition for carbon materials 
-define G1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define G2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define G3(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define G4(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define G5(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define G6(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define G1(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define G2(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define G3(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define G4(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define G5(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define G6(height, center, hwhm) = Lorentzian(height, center, hwhm)
 
 
-define DD1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define DD2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define DD1(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define DD2(height, center, hwhm) = Lorentzian(height, center, hwhm)
 
 
-define D1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define D2(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define D1(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define D2(height, center, hwhm) = Lorentzian(height, center, hwhm)
 
 
-define RBM01(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM02(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM03(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM04(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM05(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM06(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM07(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM08(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM09(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM10(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM11(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define RBM12(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define RBM01(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM02(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM03(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM04(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM05(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM06(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM07(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM08(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM09(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM10(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM11(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define RBM12(height, center, hwhm) = Lorentzian(height, center, hwhm)
 
 #------------------------------------------
 #Lorentz Area

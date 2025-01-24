@@ -10,7 +10,7 @@ end
 
 
 
-filename = "/home/riccardo/Documents/Research/SPIN/Experiment/Transfer/Marzia/24-10-08_MoS2@Ag-CaF2/Raman/Data/map_sample.txt"
+filename = "/home/riccardo/Documents/Research/SPIN/Experiment/Exfoliation/MoS2/Gold_assisted/Raman/MoS2GE43_onSi/Data/Map_PL.txt"
 
 file = io.open(filename)
 
@@ -33,9 +33,9 @@ if file then
 
   ncols = #x
 
-  for i=2, ncols do
+  for i=2, ncols+1 do
       -- if you need to get only a part of the spectra
-      if i > 500 then break end
+      -- if i > 500 then break end
       -- create dataset
       s = "@+ < '"..filename..":1:"..i.."::' _ decimal_comma"
       F:execute(s)
