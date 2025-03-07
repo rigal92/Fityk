@@ -1,14 +1,14 @@
 #------------------------------------------
-define A1g(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define E2g1(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define A1g(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define E2g1(height, center, hwhm) = Lorentzian(height, center, hwhm)
 define GaussPLA(height, center, hwhm) = height*exp(-ln(2)*((x-center)/hwhm)^2)
 define GaussPLB(height, center, hwhm) = height*exp(-ln(2)*((x-center)/hwhm)^2)
 define GaussPLX(height, center, hwhm) = height*exp(-ln(2)*((x-center)/hwhm)^2)
-define LorPLA(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define LorPLB(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
-define LorPLX(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define LorPLA(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define LorPLB(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define LorPLX(height, center, hwhm) = Lorentzian(height, center, hwhm)
 
 #define bg
 define BgPol(a0=intercept, a1=slope, a2=0, a3=0, a4=0, a5=0, a6=0) = a0 + a1*x + a2*x^2 + a3*x^3 + a4*x^4 + a5*x^5 + a6*x^6
-define BgLorentz(area, center, hwhm) = Lorentzian(area/hwhm/pi, center, hwhm)
-define Si(height, center, hwhm) = height/(1+((x-center)/hwhm)^2)
+define BgLorentz(height, center, hwhm) = Lorentzian(height, center, hwhm)
+define Si(height, center, hwhm) = Lorentzian(height, center, hwhm)
