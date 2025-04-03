@@ -10,7 +10,7 @@ end
 
 
 
-filename = "/home/riccardo/Documents/Research/SPIN/Experiment/Exfoliation/MoS2/Gold_assisted/Raman/MoS2GE43_onSi/Data/Map_PL.txt"
+filename = "/home/riccardo/Documents/Research/SPIN/Experiment/Exfoliation/MoS2/Transfer/2025_MoS2@TEM_Divitini/MoS2GE46T02/Raman/Data/Map_PL_S5.txt"
 
 file = io.open(filename)
 
