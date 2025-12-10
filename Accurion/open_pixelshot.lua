@@ -30,7 +30,6 @@ while true do
     ndata = math.floor(F:get_dataset_count())
     F:execute("@+=0")
     F:execute("@+=0")
-    print("@"..ndata..":title=".. filename .. ":ROI".. count .. ":Delta")
     F:execute("@"..ndata..":title=".. filename .. ":ROI".. count .. ":Delta")
     F:execute("@"..(ndata+1)..":title=".. filename .. ":ROI".. count .. ":Psi")
     for i=1,#lambda do
